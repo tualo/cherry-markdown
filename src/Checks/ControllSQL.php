@@ -10,6 +10,8 @@ use Tualo\Office\Basic\TualoApplication as App;
 
 class ControllSQL implements IPostCheck{
     
+    public static function testSessionDB(array $config){}
+
     public static function test(array $config){
         $clientdb = App::get('clientDB');
         if (!is_null($clientdb)){
