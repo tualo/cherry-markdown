@@ -8,9 +8,8 @@ use Tualo\Office\Basic\PostCheck;
 use Tualo\Office\Basic\TualoApplication as App;
 
 
-class ControllSQL implements IPostCheck{
+class ControllSQL extends PostCheck{
     
-    public static function testSessionDB(array $config){}
 
     public static function test(array $config){
         $clientdb = App::get('clientDB');
