@@ -49,19 +49,17 @@ Ext.define('Tualo.cherrymarkdown.form.field.CherryMarkdown', {
     
     createEditor: function(){
         let me = this;
-        setTimeout(function(){
-            this.cherrymarkdown = new Cherry({
-                id: this.id,
-                value: '',
-                previewer: {
-                    enablePreviewerBubble: false
-                },
-                callback: {
-                    afterChange: this.onDidChangeContent.bind(this)
-                },
-               locale: 'de_DE'
-            });
-        }.bind(me),3000);
+        this.cherrymarkdown = new Cherry({
+            id: this.id,
+            value: '',
+            previewer: {
+                enablePreviewerBubble: false
+            },
+            callback: {
+                afterChange: this.onDidChangeContent.bind(this)
+            },
+           locale: 'de_DE'
+        });
     },
     onDestroy: function(){
         //this.cherrymarkdown.dispose();
