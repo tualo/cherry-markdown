@@ -10,6 +10,7 @@ class Middleware implements IMiddleware{
             try{
                 TualoApplication::javascript('cherry-markdown_loader', './cherry-markdownlib/dist/cherry-markdown.js',[],-10000);
                 TualoApplication::stylesheet( './cherry-markdownlib/dist/cherry-markdown.min.css',10000);
+                TualoApplication::stylesheet( './cherry-markdownlib/dist/cherry-markdown.extended.css',10001);
             }catch(\Exception $e){
                 TualoApplication::set('maintanceMode','on');
                 TualoApplication::addError($e->getMessage());
