@@ -8,7 +8,7 @@ class Middleware implements IMiddleware{
     public static function register(){
         TualoApplication::use('cherry-markdown',function(){
             try{
-                TualoApplication::javascript('cherry-markdown_loader', './cherry-markdownlib/dist/cherry-markdown.js',[],-10000);
+                // TualoApplication::javascript('cherry-markdown_loader', './cherry-markdownlib/dist/cherry-markdown.js',[],-10000);
                 TualoApplication::stylesheet( './cherry-markdownlib/dist/cherry-markdown.min.css',10000);
                 TualoApplication::stylesheet( './cherry-markdownlib/dist/cherry-markdown.extended.css',10001);
             }catch(\Exception $e){
